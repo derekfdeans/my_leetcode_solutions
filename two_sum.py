@@ -7,9 +7,9 @@
 
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        for i in range(0,len(nums)): # starting loop for first number
-            for j in range(0, len(nums)): # loop back to add to first number
-                if (nums[i] + nums[j]) == target and i != j: # if indexes are not the same, adding the list's index results are equal to target
-                    return [i, j] # return the indexes -> correct solution
+        for i in range(0,len(nums)): # starting loop for the first number
+            for j in range(0, len(nums)): # loop back to get the second number to add to the first number
+                if (nums[i] + nums[j]) == target and i != j: # if indexes are not the same, and adding the list's index results are equal to target,
+                    return [i, j] # return the indexes -> it's the correct solution
         
-        return [0,0] # if nothing was added through the loops
+        return [0,0] # if nothing was added to the loops (no solution), return 0,0
