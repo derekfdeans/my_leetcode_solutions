@@ -25,14 +25,15 @@ Given a roman numeral, convert it to an integer.
 
 public class Solution {
     public int RomanToInt(string s) {
-        Dictionary<char,int> letterToValue = new Dictionary<char, int>();
-        letterToValue.Add('I', 1);
-        letterToValue.Add('V', 5);
-        letterToValue.Add('X', 10);
-        letterToValue.Add('L', 50);
-        letterToValue.Add('C', 100);
-        letterToValue.Add('D', 500);
-        letterToValue.Add('M', 1000);
+        Dictionary<char,int> letterToValue = new Dictionary<char, int> {
+            ['I'] = 1,
+            ['V'] = 5,
+            ['X'] = 10,
+            ['L'] = 50,
+            ['C'] = 100,
+            ['D'] = 500,
+            ['M'] = 1000
+        };
 
         int sum = 0;
         int previousNumber = 0;
